@@ -1,0 +1,178 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>OnlyPost Setup Instructions</title>
+  <meta name="description" content="Instructions on how to set up your OnlyPost script.">
+  <link rel="stylesheet" href="main.css">
+
+  <style>
+    code {
+      color: red;
+      font-size: 15px;
+    }
+    li {
+      font-size: 18px;
+    }
+    h1.headercenter {
+      text-align: center;
+    } 
+    h2.headercenter {
+      text-align: center;
+    }
+    h3 {
+      text-align: center;
+    }
+    img {
+      border: 2px solid black;
+    }
+    iframe {
+      border: 2px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="headercenter">OnlyPost Setup Instructions</h1>
+  <h2 class="headercenter">Please follow these instructions carefully and in order. This process should take about 20-30 minutes from start to finish.</h2>
+  <br>
+  
+  <h2><u>Saving the OnlyPost Folder onto Your Desktop</u></h2>
+    <ol>
+      <li>Open the email I sent you containing the blue OnlyPost folder.</li>
+      <li>Right click the blue <b>OnlyPost</b> folder.</li>
+      <li>Click 'Save Attachment'</li>
+      <li>Click the drop down menu to the right of 'Where:' and select 'Desktop' (<b>See image below step 5 for reference</b>).</li>
+      <li>Click the save button.</li>
+      <br>
+      <img src="images/folder_download_example.jpg" style="width:40%;height:40%;"><br>
+      <br>
+    </ol>
+
+    <h2 id="anchor"><u>Using the Terminal</u></h2>
+    <ol>
+      <li>Click the magnifying glass icon located at the top right of your screen (or hit command+space).</li>
+      <li>Type ‘Terminal’ into the Spotlight Search bar (do not include quotation marks).</li>
+      <li>Double click the "terminal" option with the black icon to the left displayed in the Spotlight Search bar.</li>
+      <li>Drag the Terminal icon (the black box at the bottom right of your screen) and drag it next to your safari icon to add it to your dock.</li>
+      <li>Click the red button in the upper left area of the terminal window (this is how you will close the terminal window from here on out).</li>
+      <li>To open a new terminal window as requested in some of the instructions below, all you have to do is click the black terminal icon in your dock.</li>
+      <li>Watch the embedded video tutorial below to see how to complete this section if you get confused with the written instructions above. <b>Click the gear icon when the video starts playing to change the video quality to 720p if it appears blurry.</b></li>
+      <br>
+      <iframe width="840" height="630" src="https://www.youtube.com/embed/Rz0py6oe5Ag"></iframe><br>
+      <br>
+    </ol>
+
+    <h2><u>Saving the Scripts Folder onto Your Desktop</u></h2>
+    <ol>
+      <li>Open a new terminal window (<a href="#anchor">click here if you forgot how to open a new terminal window -- read step 6</a>).</li>
+      <li>Copy the red text below and paste it into your terminal window and hit enter.</li>
+      <br>
+      <code>cd Desktop; git clone https://github.com/Jchristian27/scripts.git</code><br>
+      <br>
+      <li>Close the terminal window when the script is done executing (this will only take a few seconds).</li>
+    </ol>
+
+    <h2><u>Updating Your macOS</u></h2>
+    <ol>
+      <li>Open a new terminal window (<a href="#anchor">click here if you forgot how to open a new terminal window -- read step 6</a>).</li>
+      <li>Copy and paste the red text below into the terminal and hit enter.</li>
+      <br>
+      <code>cd Desktop/Scripts; zsh osx_upgrade.sh</code><br>
+      <br>
+      <li>If your operating system is up to date enough to use the OnlyPost script you will see a message that says "Everything is up to date!". If your operating system is not up to date enough to use the OnlyPost script you will be prompted to update it. Please do so if prompted.</li>
+      <li>Close the terminal window when the script is done executing and you see the "[Process completed]" message at the bottom of your terminal screen.</li>
+    </ol>
+
+  <h2><u>Installing Requirements</u></h2>
+    <ol>
+      <li>Open a new terminal window (<a href="#anchor">click here if you forgot how to open a new terminal window -- read step 6</a>).</li>
+      <li>Copy and paste the red text below into the terminal and hit enter.</li>
+      <br>
+      <code>cd Desktop/Scripts; zsh devToolsInstall.sh</code><br>
+      <br>
+      <li>Enter your macOS user password when prompted.</li>
+      <li>The terminal will display a list of what will be installed. Hit return (the enter button) when you are asked to do so.</li>
+      <li>Close the terminal window when the requirements are finished installing and you see the "[Process completed]" message (this process might take a few minutes).</li>
+    </ol>
+
+  <h2><u>Getting Your Notes App Ready</u></h2>
+    <ol>
+      <li>Open up your notes app (preferred) or get a piece of paper and a writing utensil (not preferred but will work if you don't have a notes app for whatever reason).</li>
+      <li>Copy and paste the text below into your notes app or write them down on your piece of paper if you're not using a notes app. Keep your notes app open and ready as you will be using it shortly.</li>
+    </ol>
+      <br>
+      <code style="margin-left: 30px;">My Client ID is:</code><br>
+      <code style="margin-left: 30px;">My Client Secret is:</code><br>
+      <code style="margin-left: 30px;">My Refresh Token is:</code><br>
+      <br>
+
+  <h2><u>Setting Up Your Reddit App</u></h2>
+    <ol>
+      <li><a href="https://reddit.com/prefs/apps" target="_blank">Click this link to go to your Reddit app dashboard.</a></li>
+      <li>Go to the bottom of the screen and click the button that says ‘are you a developer? create an app...’</li>
+      <br>
+      <img src="images/Create_an_app_button.jpg" style="width:75%;height:75%;"><br>
+      <br>
+      <li>Copy and paste the red text below into the name box <b>(look at the image below step 8 for reference).</b></li>
+      <p style="color:red;">OnlyPost</p>
+      <li>There will be three bubbles with ‘web app’, ‘installed app’, and ’script’ next to them. Select the bubble that says ‘script’ <b>(look at the picture below step 8 for reference).</b></li>
+      <li>Copy and paste the red text below into the description box <b>(look at the image below step 8 for reference).</b></li>
+      <p style="color:red;">A script to help me streamline the picture posting process.</p>
+      <li>Leave the about url box empty.</li>
+      <li>Copy and paste the red text below into the box titled ‘redirect uri’ <b>(look at the image below step 8 for reference).</b></li>
+      <p style="color:red;">http://localhost:8080</p>
+      <li>Click the 'create app' button at the bottom left of the application form <b>(look at the image below for reference).</b></li>
+      <br>
+      <img src="images/create_application.jpg" style="width:75%;height:75%;"><br>
+      <br>
+      <li>Please copy your Client ID (the random numbers and letters) located under the title that says ‘OnlyPost’ and paste it into your notes after "My Client ID is:" <b>(look at the image below step 10 for reference).</b></li>
+      <li>Please copy your Client Secret (the random numbers and letters) located to the right of ‘secret’ and paste it into your notes after "My Client Secret is:" <b>(look at the image below for reference).</b></li>
+      <br>
+      <img src="images/client_id_and_client_secret.jpg" style="width:60%;height:60%;"><br>
+      <br>
+    </ol>
+  
+  <h2><u>Running 'token'</u></h2>
+    <ol>
+      <li>Open a new terminal window (<a href="#anchor">click here if you forgot how to open a new terminal window -- read step 6</a>).</li>
+      <li>Copy and paste the red text below into the terminal and hit enter.</li>
+      <br>
+      <code>token</code><br>
+      <br>
+      <li>Copy and paste your Client ID into the terminal when asked to do so and press enter.</li>
+      <li>Copy and paste your Client Secret into the terminal when asked to do so and press enter.</li>
+      <li>Copy and paste the URL that the terminal gives you into your browser and click the allow button at the bottom of the page <b>(see image below for reference).</b></li>
+      <br>
+      <img src="images/refresh_token_example.jpg" style="width:65%;height:65%;"><br>
+      <br>
+      <li>Once you hit the allow button, a new tab will open with your refresh token. Your computer may not load this new page at first. This isn't an issue, simply refresh the page to see your token like I did in the video below. <b>(ONLY COPY THE NUMBERS AND LETTERS THAT APPEAR AFTER "Refresh Token:" -- see video below for reference)</b>. Please copy your Refresh Token when it appears and paste it into your notes after "My Refresh Token is:"</li>
+      <li>Close the terminal window.</li>
+      <li>Watch the embedded video tutorial below to see how to complete this section if you get confused with the written instructions above. <b>Click the gear icon when the video starts playing to change the video quality to 720p if it appears blurry.</b></li>
+      <br>
+      <iframe width="840" height="630" src="https://www.youtube.com/embed/Nj5XqHPx68Y"></iframe><br>
+      <br>
+    </ol>
+  
+  <h2><u>Setting Up Your creds.py File</u></h2>
+    <ol>
+      <li>Open a new terminal window (<a href="#anchor">click here if you forgot how to open a new terminal window -- read step 6</a>).</li>
+      <li>Copy and paste the red text below into the terminal and hit enter.</li>
+      <br>
+      <code>creds</code><br>
+      <br>
+      <li>Enter all of the information you are asked for. This information is case sensitive so please be mindful of that when entering things.</li>
+      <li>Close the terminal window when the script is done executing and you see the "[Process completed]" message at the bottom of your terminal screen.</li>
+      <li>If you entered any of your Reddit credentials incorrectly in the above steps, simply copy and paste the red text under step 2 into the terminal again and hit enter to update your credentials with the correct information.</li>
+    </ol>
+
+    <br>
+    <!--<h2 class="headercenter">Congratulations, you're all finished! <a href="https://jchristian27.github.io/OnlyPostHowToPost/">Click here</a> for instructions on how to post pictures and videos with your OnlyPost script.</h2>-->
+    <br>
+    <br>
+    <br>
+</body>
+</html>
